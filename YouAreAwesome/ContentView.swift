@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
+        
+        VStack {//this is how to view the UI
+            Image(systemName: "star.bubble.fill")
+                .resizable()
+                .scaledToFit()
                 .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+                .foregroundStyle(.pink)
+            Text("You Are Awesome!")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundStyle(.brown)
         }
         .padding()
+        
     }
 }
 
