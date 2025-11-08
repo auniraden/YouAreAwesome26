@@ -14,20 +14,38 @@ struct ContentView: View {
     var body: some View {
         
         VStack {//this is how to view the UI
+            Spacer()
             Image(systemName: "star.bubble.fill")
                 .resizable()
                 .scaledToFit()
                 .imageScale(.large)
-                .foregroundStyle(.pink)
+                .foregroundStyle(.yellow)
             Text(message)
                 .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundStyle(.brown)
-            Button("Click Me!") {
-                message = "So cool!"
+                .fontWeight(.ultraLight)
+                .foregroundStyle(.black)
+            
+            Spacer()//adds as mych space as it can fill up the view, pushing other Views to the View's boundaries
+            
+            HStack{
+                Button("Awesome!") {
+                    message = "Awesome!"
+                }
+               
+                
+                Button("Great!") {
+                    message = "Great!"
+                    
+                }
+                
             }
+            .buttonStyle(.glassProminent)
+            .font(.title2)
+            .tint(.yellow)
+            
         }
-           .padding()
+        
+        .padding()
         
     }
 }
